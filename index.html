@@ -14,23 +14,44 @@
             <div id="imagem"></div>
             <div id="formulario">
                 <h1>Login</h1>
-                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente</p>
-                <form action="#" method="post" autocomplete="on">
+                <p>Seja bem-vindo(a). Faça login para acessar sua conta e poder fazer as configurações no seu ambiente</p>
+                <div id="tela">
                     <div class="campo">
                         <span class="material-symbols-outlined">person</span>
-                        <input type="email" name="login" id="ilogin" placeholder="seu e-mail" autocomplete="email" required maxlength="30">
+                    
+                    
+                        <input type="text" name="login" id="ilogin" placeholder="Crie uma senha" autocomplete="current-password" >
                         <label for="ilogin">Login</label>
                     </div>
                     <div class="campo">
-                        <span class="material-symbols-outlined">key</span>
-                        <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <span class="material-symbols-outlined">login</span>
+                        <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" autocomplete="current-password">
                         <label for="isenha">Senha</label>
                     </div>
-                    <input type="submit" value="Entrar">
-                    <a href="#" class="botao">Esqueci a senha<span class="material-symbols-outlined">mail</span></a>
-                </form>
+                    
+                    <input type="submit" id="entrar" value="Entrar" onclick="verificar()">
+                    <a href="#" class="botao" id="resp"><span class="material-symbols-outlined">mail</span></a>
+                </div>
             </div>
         </section>
     </main>
+
+    <script>
+        function verificar(){
+            var senha_cadastro = window.document.getElementById('ilogin')
+            var senha_confirma = window.document.getElementById('isenha')
+            var n1 = (senha_cadastro.value)
+            var n2 = (senha_confirma.value)
+            var n3 = n1 + n2
+            if (n1 == n2){
+                var resp = window.document.getElementById('resp')
+                resp.innerText = ('Acesso Permitido')
+            }
+            else {
+                var resp = window.document.getElementById('resp')
+                resp.innerText = ('Acesso Negado')
+            }
+        }
+    </script>
 </body>
 </html>

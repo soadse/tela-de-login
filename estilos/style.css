@@ -56,7 +56,7 @@ main {
     text-align: justify;
     font-size: 0.8em;
 }
-form > .campo {
+#tela > .campo {
     background-color: var(--cor02);
     border: 2px solid var(--cor02);
     display: block;
@@ -87,7 +87,7 @@ form > .campo {
 .campo > input:focus-within {
     background-color: white;
 }
-form > input[type=submit] {
+#tela > input[type=submit] {
     display: block;
     font-size: 1em;
     width: 100%;
@@ -98,10 +98,10 @@ form > input[type=submit] {
     border-radius: 5px;
     cursor: pointer;
 }
-form > input[type=submit]:hover {
+#tela > input[type=submit]:hover {
     background-color: #337573; 
 }
-form > .botao {
+#tela > .botao {
     display: block;
     text-align: center;
     font-size: 1em;
@@ -115,10 +115,10 @@ form > .botao {
     text-decoration: none;
     color: white;
 }
-form > .botao > span {
+#tela > .botao > span {
     font-size: 0.8em;
 }
-form > .botao:hover {
+#tela > .botao:hover {
     background-color: #337573;
     color: white;
 }
